@@ -37,7 +37,7 @@ export const ContactList = () => {
             return (
               <ContactItem
                 key={id}
-                id={id}
+                // id={id}
                 name={name}
                 number={number}
                 onDelete={deleteContact}

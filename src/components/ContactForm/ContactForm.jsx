@@ -3,23 +3,26 @@ import { useState } from 'react';
 import css from '../ContactForm/ContactForm.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { addContacts } from 'Redux/contactsOperations';
-import * as contactsSelectors from '../../Redux/contactsSelectors'
+import * as contactsSelectors from '../../Redux/contactsSelectors';
 
 export const ContactForm = () => {
   const [name, setName] = useState('');
-  const [number, setnumber] = useState('');
+  const [number, setNumber] = useState('');
+
+  console.log(name, number);
 
   const dispatch = useDispatch();
   const items = useSelector(contactsSelectors.getItemsContacts);
 
-  const handleAddContacts = (name, number) => {
-    const mapName = items.map(item => {
+  const handleAddContacts = () => {
+    const mapName = items
+      .map(item => {
         return item.name;
       })
       .join('')
       .includes(name);
     if (!mapName) {
-      dispatch(addContacts(name, number));
+      dispatch(addContacts({ name, number }));
     } else {
       return alert(`${name} is already in contacts.`);
     }
@@ -34,7 +37,7 @@ export const ContactForm = () => {
         break;
 
       case 'number':
-        setnumber(value);
+        setNumber(value);
         break;
 
       default:
@@ -46,12 +49,12 @@ export const ContactForm = () => {
     event.preventDefault();
     const form = event.target;
 
-    form.reset();
-
-    // onAdd(name, number);
     handleAddContacts(name, number);
+
     setName('');
-    setnumber('');
+    setNumber('');
+
+    form.reset();
   };
 
   return (
