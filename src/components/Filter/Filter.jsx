@@ -3,7 +3,7 @@ import { contactsFilterAction } from 'Redux/filter.slice';
 // import { filterContacts } from 'Redux/contactsOperations';
 import { useDispatch, useSelector } from 'react-redux';
 
-import * as contactsSelectors from '../../Redux/contactsSelectors';
+import * as contactsSelectors from '../../Redux/contact/contactsSelectors';
 
 export const Filter = () => {
   const dispatch = useDispatch();

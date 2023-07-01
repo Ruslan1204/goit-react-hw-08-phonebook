@@ -1,6 +1,6 @@
 // import { initState } from './contacts.init-state';
 
-import { contactsReducer } from './contacts.slice';
+import { contactsReducer } from './contact/contacts.slice';
 
 import { configureStore } from '@reduxjs/toolkit';
 
@@ -21,7 +21,7 @@ import {
 import storage from 'redux-persist/lib/storage';
 
 const persistConfig = {
-  key: 'authUsers',
+  key: 'auth',
   storage,
   whitelist: ['token'],
 };

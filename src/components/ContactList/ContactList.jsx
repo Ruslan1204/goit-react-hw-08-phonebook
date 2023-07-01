@@ -5,8 +5,8 @@ import { useDispatch, useSelector } from 'react-redux';
 // import { contactsDeleteAction } from 'Redux/contacts.slice';
 import { useEffect } from 'react';
 
-import * as contactsOperations from '../../Redux/contactsOperations';
-import * as contactsSelectors from '../../Redux/contactsSelectors';
+import * as contactsOperations from '../../Redux/contact/contactsOperations';
+import * as contactsSelectors from '../../Redux/contact/contactsSelectors';
 
 export const ContactList = () => {
   const dispatch = useDispatch();
@@ -37,7 +37,6 @@ export const ContactList = () => {
             return (
               <ContactItem
                 key={id}
-                // id={id}
                 name={name}
                 number={number}
                 onDelete={deleteContact}

@@ -17,10 +17,11 @@ const authSlice = createSlice({
       //   state.isLoggedIn = true;
       // })
       .addCase(register.fulfilled, (state, { payload }) => {
+        state.user = payload.user;
+        state.token = payload.token;
         state.isLoggedIn = true;
-        state.user = payload;
-        state.token = payload;
       })
+
       .addCase(register.rejected, state => {
         state.isLoggedIn = false;
       })
@@ -28,9 +29,9 @@ const authSlice = createSlice({
       //   state.isLoggedIn = true;
       // })
       .addCase(logIn.fulfilled, (state, { payload }) => {
+        state.user = payload.user;
+        state.token = payload.token;
         state.isLoggedIn = true;
-        state.user = payload;
-        state.token = payload;
       })
       .addCase(logIn.rejected, state => {
         state.isLoggedIn = false;
@@ -50,13 +51,15 @@ const authSlice = createSlice({
       //   state.isLoggedIn = true;
       // })
       .addCase(refreshUser.fulfilled, (state, { payload }) => {
-        state.user = payload;
+        state.user = payload.user;
         state.isLoggedIn = true;
-        // state.isRefreshing = false;
+        state.isRefreshing = false;
       })
-      // .addCase(refreshUser.rejected, state => {
-      //   state.isLoggedIn = false;
-      // });
+      .addCase(refreshUser.rejected, state => {
+        state.user = { name: null, email: null };
+        state.token = null;
+        state.isLoggedIn = false;
+      });
   },
 });
 
