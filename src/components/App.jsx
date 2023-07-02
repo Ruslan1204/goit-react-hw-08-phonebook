@@ -12,6 +12,8 @@ import { useAuth } from 'hooks/useAuth';
 import { RestrictedRoute } from './RestrictedRoute';
 import { PrivateRoute } from './PrivateRoute';
 
+
+
 const Home = lazy(() => import('pages/Home'));
 const Register = lazy(() => import('pages/Register'));
 const Login = lazy(() => import('pages/Login'));
@@ -29,6 +31,9 @@ export const App = () => {
   return isRefreshing ? (
     <b>Refreshing user...</b>
   ) : (
+
+
+            
     <div className={css.container}>
       <Routes>
         <Route path="/" element={<Layout />}>
@@ -58,5 +63,6 @@ export const App = () => {
         </Route>
       </Routes>
     </div>
+
   );
 };

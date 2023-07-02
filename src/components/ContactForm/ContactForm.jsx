@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import css from '../ContactForm/ContactForm.module.css';
+// import css from '../ContactForm/ContactForm.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { addContacts } from 'Redux/contact/contactsOperations';
 import * as contactsSelectors from '../../Redux/contact/contactsSelectors';
-
+import { Button, Grid, TextField } from '@mui/material';
 
 export const ContactForm = () => {
   const [name, setName] = useState('');
@@ -11,8 +11,6 @@ export const ContactForm = () => {
 
   const dispatch = useDispatch();
   const items = useSelector(contactsSelectors.getItemsContacts);
-
-
 
   const handleAddContacts = () => {
     const mapName = items
@@ -25,7 +23,6 @@ export const ContactForm = () => {
       dispatch(addContacts({ name, number }));
     } else {
       return alert(`${name} is already in contacts.`);
-
     }
   };
 
@@ -59,9 +56,40 @@ export const ContactForm = () => {
   };
 
   return (
-    <div>
+    <Grid container>
       <form onSubmit={handleSubmit}>
-        <label>
+        <h1>Phonebook</h1>
+        <Grid display="flex">
+          <TextField
+            onChange={handleChangeForm}
+            id="outlined-controlled"
+            label="Name"
+            value={name}
+            variant="outlined"
+            name="name"
+            sx={{ mr: 3 }}
+          />
+
+          <TextField
+            onChange={handleChangeForm}
+            // id="outlined-basic"
+            id="outlined-controlled"
+            label="Number"
+            variant="outlined"
+            name="Number"
+            value={number}
+          />
+        </Grid>
+        <Button variant="contained" type="submit" sx={{ mt: 2 }} size="sm">
+          Add contact
+        </Button>
+      </form>
+    </Grid>
+  );
+};
+
+{
+  /* <label>
           <p>Name</p>
           <input
             onChange={handleChangeForm}
@@ -72,9 +100,11 @@ export const ContactForm = () => {
             title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
             required
           />
-        </label>
+        </label> */
+}
 
-        <label>
+{
+  /* <label>
           <p>Number</p>
           <input
             onChange={handleChangeForm}
@@ -85,15 +115,13 @@ export const ContactForm = () => {
             title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
             required
           />
-        </label>
-        <button className={css.bloc} type="submit">
-          Add contact
-        </button>
-      </form>
-    </div>
-  );
-};
-
+        </label> */
+}
+{
+  /* <button className={css.bloc} type="submit">
+            Add contact
+          </button> */
+}
 //   state = {
 //     name: '',
 //     number: '',
