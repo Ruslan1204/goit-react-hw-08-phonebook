@@ -57,7 +57,7 @@ export const ContactForm = () => {
   return (
     <Grid container>
       <form onSubmit={handleSubmit}>
-        <h1>Phonebook</h1>
+        <h4>To add a new contact, enter a name and number</h4>
         <Grid display="flex">
           <TextField
             onChange={handleChangeForm}

@@ -21,7 +21,7 @@ const RegisterForm = () => {
   return (
     <Grid container justifyContent="center">
       <form onSubmit={handleSubmit}>
-        <h1>Phonebook</h1>
+        <h4>To use the application you need to register</h4>
         <Grid display="flex">
           <TextField
             id="outlined-basic"
@@ -69,5 +69,3 @@ const RegisterForm = () => {
 };
 
 export default RegisterForm;
-
-

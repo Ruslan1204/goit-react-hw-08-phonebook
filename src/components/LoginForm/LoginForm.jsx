@@ -20,7 +20,7 @@ const LoginForm = () => {
   return (
     <Grid container justifyContent="center">
       <form onSubmit={handleSubmit}>
-        <h1>Phonebook</h1>
+        <h4>Please enter your login and password</h4>
         <Grid display="flex">
           <TextField
             id="outlined-basic"
@@ -58,5 +58,3 @@ const LoginForm = () => {
 };
 
 export default LoginForm;
-
-

@@ -1,6 +1,6 @@
 import { contactsFilterAction } from 'Redux/filter.slice';
 
-import { useDispatch} from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 // import * as contactsSelectors from '../../Redux/contact/contactsSelectors';
 import { TextField } from '@mui/material';
@@ -17,7 +17,7 @@ export const Filter = () => {
 
   return (
     <>
-          <h2>Contacts</h2>
+      <h4>Here you can filter your contacts</h4>
       <TextField
         onChange={changeFilter}
         id="outlined-basic"
@@ -27,8 +27,6 @@ export const Filter = () => {
         fullWidth
       />
     </>
-
-
   );
 };
 
