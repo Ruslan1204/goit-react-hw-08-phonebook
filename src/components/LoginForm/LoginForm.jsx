@@ -59,16 +59,4 @@ const LoginForm = () => {
 
 export default LoginForm;
 
-{
-  /* <form onSubmit={handleSubmit} autoComplete="off">
-<label>
-  <p>Email</p>
-  <input type="email" name="email" />
-</label>
-<label>
-  <p>Password</p>
-  <input type="password" name="password" />
-</label>
-<button type="submit">Log In</button>
-</form> */
-}
+

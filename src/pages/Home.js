@@ -1,4 +1,4 @@
-import { Container, Grid, Paper, Typography, Button } from '@mui/material';
+import { Container, Grid, Typography, Button } from '@mui/material';
 
 import { styled } from '@mui/material/styles';
 
@@ -29,53 +29,38 @@ const Overlay = styled('div')(() => ({
 
 export default function Home() {
   return (
-    <>
-      <Wraper style={{ backgroundImage: `url(https://source.unsplash.com/random)` }}>
-        {/* <Paper 
-          style={{ backgroundImage: `url(https://source.unsplash.com/random)` }}
-        > */}
-          <Container fixed>
-            <Overlay />
-            <Grid container>
-              <Grid item md={6}>
-                <Wrap>
-                  <Typography
-                    component="h1"
-                    variant="h3"
-                    color="inherit"
-                    gutterBottom
-                  >
-                    My Contacts Phone
-                  </Typography>
-                  <Typography component="h5" color="inherit" paragraph>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum.
-                  </Typography>
-                  <Button variant="contained" color="error">
-                    Contacts
-                  </Button>
-                </Wrap>
-              </Grid>
-            </Grid>
-          </Container>
-        {/* </Paper> */}
-      </Wraper>
-      {/* <Container fixed>
-        <Grid display="flex" justifyContent="space-evenly">
-          <h1>
-            Contacts manager welcome page
-            <span role="img" aria-label="Greeting icon">
-              💁‍♀️
-            </span>
-          </h1>
+    <Wraper
+      style={{ backgroundImage: `url(https://source.unsplash.com/random)` }}
+    >
+      <Container fixed>
+        <Overlay />
+        <Grid container>
+          <Grid item md={6}>
+            <Wrap>
+              <Typography
+                component="h1"
+                variant="h3"
+                color="inherit"
+                gutterBottom
+              >
+                My Contacts Phone
+              </Typography>
+              <Typography component="h5" color="inherit" paragraph>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </Typography>
+              <Button variant="contained" color="error">
+                Contacts
+              </Button>
+            </Wrap>
+          </Grid>
         </Grid>
-      </Container> */}
-    </>
+      </Container>
+    </Wraper>
   );
 }

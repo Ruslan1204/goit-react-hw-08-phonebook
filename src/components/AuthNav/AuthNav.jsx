@@ -17,18 +17,3 @@ export const AuthNav = () => {
     </div>
   );
 };
-{
-  /* <IconButton color="secondary" variant="outlined" >
-          <Typography variant='button'>Register</Typography>
-        </IconButton> */
-}
-{
-  /* <Button color="secondary" variant="contained" sx={{ mr: 2 }} >
-        <NavLink to="/register">Register</NavLink>
-      </Button> */
-}
-{
-  /* <Button color="inherit" variant="outlined">
-        <NavLink to="/logIn">Log In</NavLink>
-      </Button> */
-}

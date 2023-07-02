@@ -70,20 +70,4 @@ const RegisterForm = () => {
 
 export default RegisterForm;
 
-{
-  /* <form onSubmit={handleSubmit}>
-<label>
-  <p>Name</p>
-  <input type="text" name="name" />
-</label>
-<label>
-  <p>Email</p>
-  <input type="email" name="email" />
-</label>
-<label>
-  <p>Password</p>
-  <input type="password" name="password" />
-</label>
-<button type="submit">Register</button>
-</form> */
-}
+

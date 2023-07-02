@@ -1,14 +1,13 @@
 import { contactsFilterAction } from 'Redux/filter.slice';
-// import PropTypes from 'prop-types';
-// import { filterContacts } from 'Redux/contactsOperations';
-import { useDispatch, useSelector } from 'react-redux';
 
-import * as contactsSelectors from '../../Redux/contact/contactsSelectors';
-import { Grid, TextField } from '@mui/material';
+import { useDispatch} from 'react-redux';
+
+// import * as contactsSelectors from '../../Redux/contact/contactsSelectors';
+import { TextField } from '@mui/material';
 
 export const Filter = () => {
   const dispatch = useDispatch();
-  const filter = useSelector(contactsSelectors.getFilterContacts);
+  // const filter = useSelector(contactsSelectors.getFilterContacts);
 
   const changeFilter = evt => {
     const { value } = evt.target;

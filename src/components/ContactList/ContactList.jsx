@@ -1,13 +1,13 @@
-// import PropTypes from 'prop-types';
-// import css from '../ContactList/ContactList.module.css';
+
+
 import { ContactItem } from '../ContactItem/ContactItem';
 import { useDispatch, useSelector } from 'react-redux';
-// import { contactsDeleteAction } from 'Redux/contacts.slice';
-import { cloneElement, useEffect, useState } from 'react';
+
 
 import * as contactsOperations from '../../Redux/contact/contactsOperations';
 import * as contactsSelectors from '../../Redux/contact/contactsSelectors';
 import { Grid } from '@mui/material';
+import { useEffect } from 'react';
 
 
 export const ContactList = () => {
@@ -15,8 +15,7 @@ export const ContactList = () => {
   const filter = useSelector(contactsSelectors.getFilterContacts);
   const items = useSelector(contactsSelectors.getItemsContacts);
 
-  const [dense, setDense] = useState(false);
-  const [secondary, setSecondary] = useState(false);
+
 
   useEffect(() => {
     dispatch(contactsOperations.fetchContacts());
