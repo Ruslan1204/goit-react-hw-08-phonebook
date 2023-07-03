@@ -55,7 +55,7 @@ export default function Home() {
                 sunt in culpa qui officia deserunt mollit anim id est laborum.
               </Typography>
               <Button variant="contained" color="error">
-                Contacts
+              Learn more
               </Button>
             </Wrap>
           </Grid>
