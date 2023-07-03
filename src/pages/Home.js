@@ -43,7 +43,7 @@ export default function Home() {
                 color="inherit"
                 gutterBottom
               >
-                My Contacts Phone
+                My Phone Contacts
               </Typography>
               <Typography component="h5" color="inherit" paragraph>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
