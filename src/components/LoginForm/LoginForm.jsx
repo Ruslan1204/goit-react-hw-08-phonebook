@@ -2,12 +2,23 @@ import { Button, Grid, TextField } from '@mui/material';
 import { logIn } from 'Redux/auth/authOperations';
 import { useDispatch } from 'react-redux';
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { useAuth } from '../../hooks/useAuth';
+
 const LoginForm = () => {
   const dispatch = useDispatch();
+  const { isLoggedIn } = useAuth();
 
   const handleSubmit = evt => {
     evt.preventDefault();
     const form = evt.currentTarget;
+    if (!isLoggedIn) {
+      toast.error('Enter your email and password to log in', {
+        theme: 'colored',
+        position: toast.POSITION.BOTTOM_RIGHT,
+      });
+    }
     dispatch(
       logIn({
         email: form.elements.email.value,
@@ -19,6 +30,7 @@ const LoginForm = () => {
 
   return (
     <Grid container justifyContent="center">
+      <ToastContainer />
       <form onSubmit={handleSubmit}>
         <h4>Please enter your login and password</h4>
         <Grid display="flex">
